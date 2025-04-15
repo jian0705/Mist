@@ -14,3 +14,7 @@ const images = {
     amongUs: "photo/amongUsLogo.jpg",
   };
 const imgURL = images[item]
+
+let image = document.querySelector("#itemDiv img")
+image.src = imgURL
+image.alt = item
