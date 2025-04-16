@@ -13,8 +13,19 @@ const images = {
     helloNeighbor: "photo/helloNeighborLogo.jpg",
     amongUs: "photo/amongUsLogo.jpg",
   };
+const descriptions = {
+  repo: "Repo is a coop horror survival game with many jumpscare"
+}
+const price = {
+  repo: "40€"
+}
 const imgURL = images[item]
 
 let image = document.querySelector("#itemDiv img")
 image.src = imgURL
 image.alt = item
+
+let priceTag = document.getElementById("priceTag")
+let description = document.getElementById("description")
+
+priceTag.textContent = price[item]
