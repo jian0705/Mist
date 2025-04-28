@@ -25,7 +25,16 @@
     height: 700px;
     display: flex;
     align-items: center;
-    /*
-    incl. general description or system requirments or smth
-    */
+    flex-direction: column;
+    justify-content: center;
+}
+
+#buyButton{
+    width: 100px;
+    height: 40px;
+    transition: transform 0.1s ease;
+
+}
+#buyButton:active{
+    transform: scale(0.9);
 }
