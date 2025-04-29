@@ -26,16 +26,16 @@ const descriptions = {
   amongUs: "ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ",
 }
 const price = {
-  repo: "40.22€",
-  lethalCompany: "40.40€",
-  minecraft2: "57.68$",
-  securityBreach: "70.99€",
-  terraria: "20.49€",
-  payday3: "59.99€",
-  fortnite: "2€",
-  darkSouls: "50.55€",
-  helloNeighbor: "10€",
-  amongUs: "235629723.17€",
+  repo: "40.22",
+  lethalCompany: "40.40",
+  minecraft2: "57.68",
+  securityBreach: "70.99",
+  terraria: "20.49",
+  payday3: "59.99",
+  fortnite: "2",
+  darkSouls: "50.55",
+  helloNeighbor: "10",
+  amongUs: "235629723.17",
 }
 const imgURL = images[item]
 
@@ -45,11 +45,30 @@ image.alt = item
 
 let priceTag = document.getElementById("priceTag")
 let description = document.getElementById("description")
-priceTag.textContent = "Price: " + price[item]
+priceTag.textContent = "Price: " + price[item] + "€"
 description.textContent = descriptions[item]
 
-function buy(){
-  alert("purchase complete")
+let i = 0
+function recursiveInflation(){
+  priceTag.textContent = "Price: " + String(Number(price[item]) + i) + "€"
+  i += 10
+  setTimeout(recursiveInflation, 30000)
+}
+recursiveInflation()
+
+
+let spinner = document.getElementById("spinner")
+let paymentText = document.getElementById("paymentText")
+
+function processPayment(){
+  spinner.style.visibility = "hidden"
+  paymentText.style.visibility = "visible"
+  setTimeout(() => {
+    paymentText.style.visibility = "hidden"
+  }, 3000)
 }
 
-//make invisible text that appears when buy function calls for a short while and fades (setTimeout)
+function buy(){
+  spinner.style.visibility = "visible"
+  setTimeout(processPayment,5000)
+}
