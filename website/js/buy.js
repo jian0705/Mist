@@ -52,7 +52,7 @@ let i = 0
 function recursiveInflation(){
   priceTag.textContent = "Price: " + String(Number(price[item]) + i) + "€"
   i += 10
-  setTimeout(recursiveInflation, 30000)
+  setTimeout(recursiveInflation, 20000)
 }
 recursiveInflation()
 
