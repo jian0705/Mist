@@ -1,6 +1,10 @@
-#introDiv{
+.introDiv{
     width: 500px;
     height: 200px;
+    background-color: rgb(70,200,217);
+    border-radius: 25px;
+    align-items: center;
+    display: flex;
 }
 
 #headerDiv{
@@ -11,6 +15,7 @@
 
 body{
     margin: 0;
+    background-color: #7000ff;
 }
 
 a{
