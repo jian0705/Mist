@@ -5,6 +5,7 @@
     border-radius: 25px;
     align-items: center;
     display: flex;
+    margin-top: 25px;
 }
 
 #headerDiv{
@@ -24,4 +25,19 @@ a{
 }
 a:hover{
     color: violet;
+}
+
+@media (orientation: portrait){
+    #headerDiv{
+        width: 100%;
+    }
+
+    .introDiv{
+        width: 70%;
+        height: 250px;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+    }
 }

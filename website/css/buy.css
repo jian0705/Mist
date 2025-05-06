@@ -12,7 +12,7 @@
     justify-content: center;
     margin-left: 100px;
     border: 5px solid black;
-    border-radius: 10%;
+    border-radius: 40px;
     background-color: rgb(70,200,217);
 }
 #imageDiv img{
@@ -82,4 +82,34 @@ a{
 }
 a:hover{
     color: violet;
+}
+
+@media (orientation){
+    #imageDiv img{
+        width: 200px;
+        height: 350px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #itemDiv{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    #imageDiv{
+        margin: 0;
+        width: 250px;
+    }
+    #textDiv{
+        margin: 0;
+        width: 70%;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

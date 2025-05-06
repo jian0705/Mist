@@ -72,3 +72,21 @@ main{
     justify-content: center;
     background-color: #7000ff;
 }
+
+@media (orientation: portrait){
+    .itemDisplay img{
+        width: 100px;
+        height: 125px;
+    }
+    .itemDisplay{
+        height: 125px;
+    }
+    .itemBox{
+        width: 100px;
+        height: 150px;
+    }
+    .container{
+        width: 70%;
+        padding: 20px;
+    }
+}
