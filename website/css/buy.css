@@ -33,6 +33,8 @@
 #buyButton{
     width: 100px;
     height: 40px;
+    border: 2px solid black;
+    background-color: rgb(70,200,217);
     transition: transform 0.1s ease;
 
 }
@@ -107,7 +109,6 @@ a:hover{
         width: 70%;
     }
     main{
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;

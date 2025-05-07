@@ -27,6 +27,14 @@ a:hover{
     color: violet;
 }
 
+section{
+    width: 500px;
+}
+
+#videoDiv{
+    display: flex;
+}
+
 @media (orientation: portrait){
     #headerDiv{
         width: 100%;
@@ -39,5 +47,6 @@ a:hover{
     section{
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 }
