@@ -16,8 +16,21 @@ let cartCount = 0
 
 let cartButton = document.getElementById("cartButton")
 
+function cartButtonClick(){
+    sessionStorage.setItem('content', JSON.stringify(cart))
+    sessionStorage.setItem('price', cartPrice.toString())
+    window.location.href = "./cart.html"
+}
+
 function addToCart(item){
     cart.push(item)
     cartCount++
-    cartPrice += price[item]
+    cartButton.textContent = "Cart (" + String(cartCount) + ")"
+    cartPrice += Number(price[item])
 }
+
+function clearCart(){
+    sessionStorage.SetItem('content', JSON.stringify([]))
+    sessionStorage.SetItem('price', "0")
+}
+clearCart()
