@@ -31,10 +31,6 @@ section{
     width: 500px;
 }
 
-#videoDiv{
-    display: flex;
-}
-
 @media (orientation: portrait){
     #headerDiv{
         width: 100%;

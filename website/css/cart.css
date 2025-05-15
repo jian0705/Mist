@@ -21,3 +21,19 @@ a{
 a:hover{
     color: violet;
 }
+
+#mainDiv{
+    display: flex;
+    gap: 100px;
+}
+#itemList{
+    width: 200px;
+}
+#taxList{
+    width: 300px;
+    max-height: 300px;
+}
+
+ul{
+    background-color: 0;
+}
