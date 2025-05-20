@@ -10,11 +10,13 @@ const price = {
     helloNeighbor: "10",
     amongUs: "235629723.17",
 }
-let cart = []
-let cartPrice = 0
-let cartCount = 0
+let cart = JSON.parse(sessionStorage.getItem("content") || "[]");
+let cartPrice = JSON.parse(sessionStorage.getItem("price") || "0")
+let cartCount = cart.length
 
 let cartButton = document.getElementById("cartButton")
+
+cartButton.textContent = "Cart (" + String(cartCount) + ")"
 
 function cartButtonClick(){
     sessionStorage.setItem('content', JSON.stringify(cart))
@@ -30,7 +32,10 @@ function addToCart(item){
 }
 
 function clearCart(){
-    sessionStorage.SetItem('content', JSON.stringify([]))
-    sessionStorage.SetItem('price', "0")
+    sessionStorage.setItem('content', "[]")
+    sessionStorage.setItem('price', "0")
+    cart = []
+    cartPrice = 0
+    cartCount = 0
+    cartButton.textContent = "Cart (" + String(cartCount) + ")"
 }
-clearCart()

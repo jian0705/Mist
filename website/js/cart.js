@@ -10,6 +10,12 @@ let itemListContent = {}
 let taxList = document.getElementById("taxList")
 let taxes = 0
 
+if (cartContent.length === 0){
+    let li = document.createElement('li')
+    li.textContent = "Box of Air"
+    itemList.appendChild(li)
+}
+
 for (let i = 0; i<cartContent.length; i++){
 
     if (cartContent[i] in itemListContent){
@@ -69,6 +75,7 @@ createTax("Final Boss Fee", 10)
 createTax("NPC Bribery Tax", 39.99)
 createTax("Mandatory DLC Fee", 9.99)
 createTax("Anti-Discount Fee", 15.99)
+createTax("Chicago Fee", 19.99)
 
 let li = document.createElement('li')
 li.textContent = "Games Tax " + cartContent.length + "x"
