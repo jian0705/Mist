@@ -37,3 +37,18 @@ a:hover{
 ul{
     background-color: 0;
 }
+
+#buyButton{
+    width: 4%;
+    background-color: aquamarine;
+    border-radius: 15px;
+    border-width: 0;
+    transition: transform 0.1s ease;
+    cursor: pointer;
+}
+#buyButton:hover{
+    background-color: aqua;
+}
+#buyButton:active{
+    transform: scale(0.9);
+}

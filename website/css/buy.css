@@ -36,7 +36,7 @@
     border: 2px solid black;
     background-color: rgb(70,200,217);
     transition: transform 0.1s ease;
-
+    cursor: pointer;
 }
 #buyButton:hover{
     transform: scale(1.1);
