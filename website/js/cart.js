@@ -90,3 +90,11 @@ createTax("Digital Shipping",99.99)
 document.getElementById("costH").textContent = "Cost: " + parsedBasePrice.toFixed(2)
 document.getElementById("taxesH").textContent = "Taxes: " + taxes.toFixed(2)
 document.getElementById("totalH").textContent = "Total Price: " + (parsedBasePrice + taxes).toFixed(2)
+
+function onBuy(){
+    let buyText = document.getElementById("buyText")
+    buyText.style.visibility = "visible"
+    setTimeout(() => {
+        buyText.style.visibility = "hidden"
+    }, 5000)
+}
